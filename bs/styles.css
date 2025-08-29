@@ -1,0 +1,32 @@
+:root {
+  --primary: #a0522d;
+  --secondary: #f4ede4;
+  --accent: #d2691e;
+  --text: #333;
+}
+body {
+  margin:0; font-family: sans-serif; color: var(--text);
+}
+.navbar {
+  position: sticky; top:0; display:flex; justify-content: space-between; align-items:center;
+  background: var(--secondary); padding: 0.5rem 1rem; z-index:1000;
+}
+.nav-links a { margin:0 0.5rem; text-decoration:none; color: var(--text); }
+.hamburger { display:none; background:none; border:none; font-size:1.5rem; }
+.cart-icon { cursor:pointer; }
+#cart-count { background: var(--accent); border-radius:50%; padding:0 0.3rem; color:white; }
+.hero {
+  background: url('placeholder.jpg') center/cover no-repeat; color:white; text-align:center; padding:4rem 1rem;
+}
+.btn { background: var(--primary); color:white; padding:0.5rem 1rem; text-decoration:none; }
+.products, .featured, .bestsellers, .newarrivals, .seasonal, .recipes, .reviews {
+  padding:2rem 1rem;
+}
+.product-card { border:1px solid #ddd; padding:1rem; border-radius:8px; text-align:center; transition: transform 0.2s; }
+.product-card:hover { transform: translateY(-5px); }
+.cart-panel {
+  position:fixed; right:-100%; top:0; width:300px; height:100%; background:white; box-shadow:-2px 0 5px rgba(0,0,0,0.3); transition:right 0.3s;
+}
+.cart-panel.open { right:0; }
+.modal { position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); display:none; align-items:center; justify-content:center; }
+.modal.open { display:flex; }
